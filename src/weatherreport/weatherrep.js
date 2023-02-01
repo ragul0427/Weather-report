@@ -41,7 +41,7 @@ const myfun=(event)=>
       </div>
     <div className='form_controller'>
       <form onSubmit={myfun}> 
-        <input type="text" id="t1" onChange={(e)=>setPost(e.target.value)}/><br></br>
+        <input type="text" id="t1" placeholder="Enter city name here" onChange={(e)=>setPost(e.target.value)}/><br></br>
         <input type="submit" value="Weather Report" className='btn'/>
       </form>
       </div>
