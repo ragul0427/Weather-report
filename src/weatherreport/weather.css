@@ -94,11 +94,16 @@ body{
 }
 
 .box img{
+display: none;
 border: 3px solid red;
 border-radius: 5px;
 object-fit: cover;
 transition: 0.5s;
 transform-origin: center;
+}
+
+.box img.active{
+  display: block;
 }  
 
 .box img:hover{
