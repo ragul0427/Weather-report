@@ -3,296 +3,140 @@
     padding: 0;
     box-sizing: border-box;
   }
-  .box{
-    background-color:lightgray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    height: 100vh;
-    width: 100wh;
-  }
-  
-  .innerbox
-  {
-    background-color: whitesmoke;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    min-height: 100%;
-    min-width: 50%;
+  .innerbox {
+  background-color: rgb(255, 252, 252);
+  height: 50%;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  border: 5px solid red;
+}
+
+body{
+  background-color: aqua;
+}
+
+.header{
+    font-size: 30px;
+    text-decoration: underline;
+    color: orangered;
+}
+
+.form_controller{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#t1
+{
+    height: 30px;
+    width: 25%;
     text-align: center;
-  }
+    margin: auto;
+    border-radius: 4px;
+    text-decoration: underline;
+}
+
+#t1:hover{
+  border:2px solid rgb(97, 135, 169);
+}
+
+
+.form_controller img{
+  width: 10%;
+  border-radius: 5%;
+}
+
+#img1{
+  margin-left: 10%;
+}
+
+#img2{
+  margin-right: 10%;
+}
+
+
+.btn{
+  height: 20%;
+  width: 30%;
+  background-color: rgb(0, 183, 244);
+  color: red;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 7px;
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+
+
+.btn:hover{
+  background-color: rgb(97, 135, 169);
+}
+
+.id-results{
   
-  .innerbox form input:first-child {
-   margin: 5px; 
-   width: 300px;
-   height: 30px;
-   text-align: left;
-   padding: 10px;
-   margin-top: 20px;
-   border: none;
-   outline: none;
-   padding-left: 20px;
-   text-decoration: underline;
-  }
-  
-  .innerbox form input:first-child:hover{
-    border: 3px solid blue;
-  }
-  
-  .innerbox form input:first-child::selection{
-    border: 3px solid blue;
-  }
-  
-  .btn{
-    background-color:transparent;
-    color: springgreen;
-    background-color: rgb(206, 181, 147);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    height: 35px;
-    width: 150px;
-    margin-top: 15px;
-    border-radius: 5px;
-    border: none;
-    
-  }
-  
-  .btn:hover{
-    background-color: rgb(183, 119, 29);
-  }
-  
-  .header span{
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .header span img{
-    height: 50px;
-    margin-top: 20px;
-  }
-  
-  span h1{
-    font-size: 30px;
-    margin-top: 40px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #ed4b00;
-  }
-  
-  span img{
-    object-fit: cover;
-    transition: 0.5s;
-    transform-origin: center;
-  
-  }
-  span img:hover{
-    transform: scale(1.5);
-  }
-  
-  .id-results{
-    display: grid;
-    justify-content: center;
-    color: red;
-    height: 70%;
     width: 100%;
-    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-    padding: 30px;
-    font-size: 20px;
-    font-weight: 900;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-  
-  
-  #name{
-    color: black;
-    width: 250px;
-    margin-top: 5px;
-    margin-left: -45px;
-  }
-  
-  #weather{
-    color: green;
-    width: 200px;
-    margin-top: 5px;
-    margin-left: -20px;
-  }
-  
-  #description{
-    color: blue;
-    width: 250px;
-    margin-left: -20px;
-      
-  }
-  
-  #temp{
-    color: brown;
-    margin-top: 20px;
-    width: 200px;
-    margin-left: -20px;
-    
-  }
-  
-  #sunrise{
-    color: red;
-    margin-top: 20px;
-    width: 200px;
-    margin-left: -20px;
-  }
-  
-  #sunset{
-    color: black;
-    margin-top: 20px;
-    width: 200px;
-    margin-left: -20px;
-  }
-  
-  #notfound{
-    font-size: 30px;
-    color:black;
-    margin-top: -90px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  .id-results #box{
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
     justify-content: space-around;
-  }
-  #box img{
-    height: 60px;
-    width: 80px;
-    margin-left: 50px;
-    margin-top: 20px;
-    border: 2px solid grey;
-    object-fit: cover;
-    transition: 0.5s;
-    transform-origin: center;
-  }
-  
-   img{
-    display: none;
-  }
-  
-  img.active
-  {
-    display: block;
-  }
-  
-  span p{
-    margin-top: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 700;
-    font-size: 15px;
-  }
-  
-  #box img:hover{
-    transform: scale(1.5);
-  }
-  
-  @media only screen and (min-width: 600px) {
-    .innerbox {
-      max-width: 90%;
-      max-height: 90%;
-    }
-    span h1{
-      font-size: 20px;
-    }
-    .id-results{
-      grid-template-columns: repeat(2,100px);
-      justify-content: space-around;
-      font-size: 12px;
-      margin-left: -5px;
-      
-    }
-  
-    #box img{
-      height: 40px;
-      width: 60px;
-    }
-    
-    #description{
-      margin-left: 15px;
-      margin-top: 20px;
-      font-size: 12px;
-      color: blue;
-      width: 140px;
-    }
+    grid-template-columns: 200px 200px;
+}
+
+ .box{
+  height: 100%;
+  width: 90%;
+}
+
+.box img{
+border: 3px solid red;
+border-radius: 5px;
+object-fit: cover;
+transition: 0.5s;
+transform-origin: center;
+}  
+
+.box img:hover{
+  transform: scale(1.5);
+}
+
+
+#img3,#img4,#img5,#img6,#img7,#img8{
+margin-top: 90px;
+height: 40%;
+width: 60%;
+}
+/* 
+#name,#description,#sunset,#sunrise,#temp,#weather{
+  color: red;
+  margin-top: 14%;
+  font-size: 20px;
+  font-weight: 700;
+} */
+
+.box div{
+  color: red;
+  margin-top: 14%;
+  font-size: 20px;
+  font-weight: 700;
   }
   
-  
-  @media only screen and (max-width: 600px) {
-    .innerbox {
-      max-width: 90%;
-      max-height: 90%;
+
+@media only screen and (max-width: 600px) {
+
+  #img3,#img4,#img5,#img6,#img7,#img8{
+    margin-top: 90px;
+    height: 40%;
+    width: 40%;
     }
-    span h1{
-      font-size: 20px;
-    }
-    .id-results{
-      grid-template-columns: repeat(2,100px);
-      justify-content: space-around;
-      font-size: 12px;
-      margin-left: -5px;
-      
-    }
-  
-  
-    #description{
-      margin-top: 20px;
-      margin-left: 10px;
-      width: 120px;
-      color: blue;
-    }
-  
-    #box img{
-      height: 40px;
-      width: 60px;
-    }
-  }
-  
-  @media only screen and (min-width: 768px)
-  {
-    .id-results{
-      grid-template-columns: repeat(3,200px);
-      font-size: 15px;
-    }
-  }
-  
-  @media only screen and (min-width: 1200px)
-  {
-    .id-results{
-      grid-template-columns: repeat(3,300px);
-      font-size: 18px
-    }
-  
-    #description{
-      font-size: 20px;
-      margin-top: 5px;
-      width: 250px;
-      margin-left: -70px;
-    }
-  }
-  
-  @media only screen and (min-width: 768px)
-  {
-    id-results{
-      grid-template-columns: repeat(2,200px);
-    }
-    span h1{
-      font-size: 30px;
-    }
-  
-    span p{
-      font-size: 18px;
-      margin-top: -0.5px;
-    }
-  
-    
-    #description{
-      font-size: 15px;
-      width: 300px;
-      margin-top: 5px;
-    
-    }
-  }
+#img3,#img5,#img7{
+  margin-left: 30px;
+}
+
+.box div{
+color: red;
+font-size: 6px;
+font-weight: 500;
+margin-left: 20px;
+}
+
+}
