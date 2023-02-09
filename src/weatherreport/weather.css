@@ -1,14 +1,3 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-  #copy{
-    margin-top: 10%;
-    font-size: 30px;
-    color: black;
-  }
 .innerbox {
   background-color: rgb(255, 252, 252);
   height: 50%;
@@ -31,6 +20,7 @@ body{
 .form_controller{
   display: flex;
   justify-content: space-evenly;
+  margin-top: 90px;
 }
 
 #t1
@@ -86,12 +76,17 @@ body{
     display: grid;
     justify-content: space-around;
     grid-template-columns: 200px 200px;
+
 }
+
+.id-results
 
  .box{
   height: 100%;
   width: 90%;
+ 
 }
+
 
 .box img{
 display: none;
@@ -104,7 +99,7 @@ transform-origin: center;
 
 .box img.active{
   display: block;
-}  
+}
 
 .box img:hover{
   transform: scale(1.5);
@@ -130,6 +125,12 @@ width: 60%;
   font-size: 20px;
   font-weight: 700;
   }
+
+  #copy{
+    margin-top: 10%;
+    font-size: 30px;
+    color: black;
+  }
   
 
 @media only screen and (max-width: 600px) {
@@ -150,7 +151,7 @@ width: 60%;
 
 .box div{
 color: red;
-font-size: 6px;
+font-size: 15px;
 font-weight: 500;
 margin-left: 20px;
 }
