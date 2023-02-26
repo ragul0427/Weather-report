@@ -1,3 +1,108 @@
+//formik and yup
+
+//formik using to store handle the values using joy.......................
+import { useFormik } from 'formik'
+import BasicSchema from './joy';
+import './App.css'
+
+// const Basicform = () => {
+//   const formik = useFormik({
+//     initialValues: {
+//       email: "",===============with using asign variable
+//       name: "",
+//       number:"",
+//     }
+//   })
+const onSubmit=()=>{
+  console.log('submitted');
+}
+
+const Basicform = () => {                    //=================first create form
+  const {values,handleBlur,handleChange,handleSubmit,errors,touched} = useFormik({
+    initialValues: {                                       //storing the values in initial values
+      email: "",//with using destructing========================
+      name: "",
+      number:"",                       
+    },
+    validationSchema:BasicSchema,                   //==============store the value from joy using validation schema.................
+      onSubmit
+  })
+
+  console.log(errors);
+
+  return (
+    <form autoComplete='off' onSubmit={handleSubmit}>
+
+      {/* <label for="email">Enter Email here:</label>
+      <input value={formik.values.email}
+        id='email'
+        type="email"
+        placeholder='Enter Email here'  ///with using asign variables....................
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+      /> */}
+
+
+     <label htmlfor="email">Enter Email here:</label>
+      <input value={values.email}
+        id='email'
+        type="email"
+        placeholder='Enter Email here'  ///with using asign variables....................
+        onChange={handleChange}
+        onBlur={handleBlur}
+        className={errors.email && touched.email?"colorchange":"" }   //======it is use for to show red border if there is error
+      /> <br></br>
+      {errors.email && touched.email && <p>{errors.email}</p> }     // it should be print error msg under the  box
+
+     <label htmlfor="name">Enter Name here:</label>
+      <input value={values.name}
+        id='name'
+        type="name"
+        placeholder='Enter name here'  ///with using asign variables....................
+        onChange={handleChange}
+        onBlur={handleBlur}
+      /> <br></br>
+      {errors.name && touched.name && <p>{errors.name}</p> }
+
+     <label htmlfor="number">Enter number here:</label>
+      <input value={values.number}
+        id='number'
+        type="number"
+        placeholder='Enter number here'  ///with using asign variables....................
+        onChange={handleChange}
+        onBlur={handleBlur}
+      /> <br></br>
+      {errors.number && touched.number && <p>{errors.number}</p> }
+      <button type='submit'>Submit</button>
+    </form>
+  )
+}
+
+export default Basicform
+
+
+//joy form
+       
+       
+ import * as yup from 'yup'
+
+// const passwordRules=/^(?=.\d)(?=.[a-z])(?=.*[A-z]).{5,}$/;  //we can create a password rules like this
+
+const BasicSchema=yup.object().shape({                    //========we create basicschema for storing to validationschema..it only show the error msg schema...
+    email:yup.string().email().required(),
+    name:yup.string().required(),
+    number:yup.string().min(6).max(10).required()
+})
+
+export default BasicSchema
+
+
+
+
+
+
+
+
 // import logo from './raha.jpg';
 // import './App.css';
 import Weatherreport from './weatherreport/weatherrep';
